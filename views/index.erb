@@ -1,0 +1,36 @@
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="thread col-sm-8 col-xs-12">
+	<% @comments.each do |comment| %>
+		<%= comment.comment_html %>
+	<% end %>
+</div>
+<div class="col-sm-2"></div>
+		<script>
+			$(".enlarge_btn").click(function(){
+				var x = $(this);
+				$(this).parent().parent().parent().parent().children(".gif_box").toggle("fast",function(){	
+					if(x.html() === "Enlarge <i class=\"fa fa-search-plus\"></i>"){
+						x.html("Shrink <i class=\"fa fa-search-minus\"></i>");
+					}else{
+						x.html("Enlarge <i class=\"fa fa-search-plus\"></i>");
+					}
+				});
+			});
+			$(".replay_btn").click(function(){
+				var x = $(this);
+				$(this).parent().parent().parent().parent().children(".reply_box").toggle("fast",function(){	
+					if(x.html() === "Replay <i class=\"fa fa-share\"></i>"){
+						x.html("NVM");
+					}else{
+						x.html("Replay <i class=\"fa fa-share\"></i>");
+					}
+				});
+			});
+			$(".btn").click(function(){
+				var x = $(this).parent().parent();
+				$( ".test" ).toggle( "slow", function() {
+					// Animation complete.
+				});
+			});
+		</script>

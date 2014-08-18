@@ -1,0 +1,106 @@
+<html> 
+<head> 
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		nav{
+			display:inline-block;
+			vertical-align:top;
+			width:25;
+		}
+		.column{
+			display:inline-block;
+			vertical-align:top;
+			width:75;
+		}
+		.thread{
+			margin-left: 2em;
+			margin-right:2em;
+		}
+		.thumb_gif{
+			width:100%;
+		}
+		.img_box{
+			display:inline-block;
+			vertical-align:top;
+			width:300px;
+		}
+		.comment_box{
+			display:inline-block;
+			vertical-align:top;
+		}
+		.comment_box h4{
+			margin-top: 0;
+		}
+		.reply_box{
+			margin-top: 1em;
+		}
+	</style>
+</head>
+<body> 
+<div class="thread">
+	<div class="comment">
+		<div class="img_box">
+			<img class="thumb_gif" src="minions_shopping.gif">
+			<div class="btn-group btn-group-justified">
+			<div class="btn-group">
+			<button type="button" class="btn btn-primary replay_btn">Replay <i class="fa fa-share"></i></button>
+			</div>
+			<div class="btn-group">
+			<button type="button" class="btn btn-primary enlarge_btn">Enlarge <i class="fa fa-search-plus"></i></button>
+			</div>
+			<div class="btn-group">
+			<button type="button" class="btn btn-primary"> Report <i class="fa fa-ban"></i></button>
+			</div>
+			</div>
+		</div>
+		<div class="comment_box">
+			<h4> [1 Hour Ago] Minion1069: </h4>
+			<p> Lets go shopping today guys? </p>
+		</div>
+		<div class="gif_box" style="display:none">
+			<img src="minions_shopping.gif">
+		</div>
+		<div class="reply_box" style="display:none;">
+			<form class="form-inline" role="form">
+				<input  class="form-control" type="text" placeholder="Username">
+				<input  class="form-control" type="text" placeholder="Gif URL">
+			</form>
+			<div class="input-group">
+			    <textarea class="form-control custom-control" rows="3" style="resize:none" placeholder="Comment..."></textarea> <span class="input-group-addon btn btn-primary">Submit <i class="fa fa-paper-plane-o"></i></span>
+			</div>
+		</div>
+		<script>
+			$(".enlarge_btn").click(function(){
+				var x = $(this);
+				$(this).parent().parent().parent().parent().children(".gif_box").toggle("fast",function(){	
+					if(x.html() === "Enlarge <i class=\"fa fa-search-plus\"></i>"){
+						x.html("Shrink <i class=\"fa fa-search-minus\"></i>");
+					}else{
+						x.html("Enlarge <i class=\"fa fa-search-plus\"></i>");
+					}
+				});
+			});
+			$(".replay_btn").click(function(){
+				var x = $(this);
+				$(this).parent().parent().parent().parent().children(".reply_box").toggle("fast",function(){	
+					if(x.html() === "Replay <i class=\"fa fa-share\"></i>"){
+						x.html("NVM");
+					}else{
+						x.html("Replay <i class=\"fa fa-share\"></i>");
+					}
+				});
+			});
+			$(".btn").click(function(){
+				var x = $(this).parent().parent();
+				$( ".test" ).toggle( "slow", function() {
+					// Animation complete.
+				});
+			});
+		</script>
+	</div>
+</div>
+</body>
+</html>

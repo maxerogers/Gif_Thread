@@ -1,0 +1,32 @@
+nav{
+	display:inline-block;
+	vertical-align:top;
+	width:25;
+}
+.column{
+	display:inline-block;
+	vertical-align:top;
+	width:75;
+}
+.thread{
+	margin-left: 2em;
+	margin-right:2em;
+}
+.thumb_gif{
+	width:100%;
+}
+.img_box{
+	display:inline-block;
+	vertical-align:top;
+	width:300px;
+}
+.comment_box{
+	display:inline-block;
+	vertical-align:top;
+}
+.comment_box h4{
+	margin-top: 0;
+}
+.reply_box{
+	margin-top: 1em;
+}

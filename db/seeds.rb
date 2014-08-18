@@ -1,0 +1,1 @@
+Comment.create(username: "Minion202", gif_url: 'img/minions_shopping.gif', data: 'Lets go shopping today guys?')
