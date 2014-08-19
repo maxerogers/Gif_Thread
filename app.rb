@@ -9,6 +9,13 @@ get "/" do
 	erb :index
 end
 
+post "/create_comment" do
+	puts params.inspect
+  Comment.create(params)
+	@comments = Comment.all
+	erb :index
+end
+
 after do
   # Close the connection after the request is done so that we don't
   # deplete the ActiveRecord connection pool.

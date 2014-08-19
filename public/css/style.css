@@ -21,7 +21,6 @@ nav{
 	width:300px;
 }
 .comment_box{
-	display:inline-block;
 	vertical-align:top;
 }
 .comment_box h4{
@@ -29,4 +28,16 @@ nav{
 }
 .reply_box{
 	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.reply_box form{
+	margin-bottom: 1em;
+}
+p{
+	font-size: 20px;
+}
+.input-group-addon{
+	background-color: #428bca;
+	border: #357ebd;
+	color: white;
 }

@@ -44,7 +44,7 @@ class Comment < ActiveRecord::Base
 				<input  class="form-control" type="text" placeholder="Gif URL">
 			</form>
 			<div class="input-group">
-			    <textarea class="form-control custom-control" rows="3" style="resize:none" placeholder="Comment..."></textarea> <span class="input-group-addon btn btn-primary">Submit <i class="fa fa-paper-plane-o"></i></span>
+			    <textarea class="form-control custom-control" rows="3" style="resize:none" placeholder="Comment..."></textarea> <span class="reply_send_btn input-group-addon btn btn-primary">Submit <i class="fa fa-paper-plane-o"></i></span>
 			</div>
 		</div>
 	</div>
