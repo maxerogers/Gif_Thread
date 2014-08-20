@@ -3,6 +3,7 @@
 <div class="thread col-sm-8 col-xs-12">
 	<div class="reply_box">
 		<form class="form-inline" role="form">
+			<input name="tier" type="hidden" value="0">
 			<input  name="username" class="form-control" type="text" placeholder="Username">
 			<input  name="gif_url" class="form-control" type="text" placeholder="Gif URL">
 		</form>
@@ -38,18 +39,13 @@
 				});
 			});
 			$(".reply_send_btn").click(function(){
-				var json  = {};
+				var json = {};
 				json.data = $(this).parent().children("textarea").val();
-				json.username = $(this).parent().parent().children("form").children("input[name*='username']").val();
-				json.gif_url = $(this).parent().parent().children("form").children("input[name*='gif_url']").val();
-				$.ajax({
-					type: "POST",
-					url: "/create_comment",
-					dataType: 'json',
-					data: json,
-					success: function(data){
-						console.log(data);
-					}
+				json.tier = $(this).parent().parent().children("form").children("input[name='tier']").val();
+				json.username = $(this).parent().parent().children("form").children("input[name='username']").val();
+				json.gif_url = $(this).parent().parent().children("form").children("input[name='gif_url']").val();
+				$.post("/create_comment",json,function(){
+					window.location.reload();
 				});
 			});
 		</script>

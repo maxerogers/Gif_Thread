@@ -16,7 +16,7 @@ class Comment < ActiveRecord::Base
 
 	def comment_html
 		'
-		<div class="comment">
+		<div class="comment tier-'+self.tier.to_s+'">
 		<div class="img_box">
 			<img class="thumb_gif" src="'+self.gif_url+'">
 			<div class="btn-group btn-group-justified">
@@ -40,8 +40,9 @@ class Comment < ActiveRecord::Base
 		</div>
 		<div class="reply_box" style="display:none;">
 			<form class="form-inline" role="form">
-				<input  class="form-control" type="text" placeholder="Username">
-				<input  class="form-control" type="text" placeholder="Gif URL">
+				<input name="tier" type="hidden" value="'+(self.tier.to_i + 1).to_s+'">
+				<input name="username" class="form-control" type="text" placeholder="Username">
+				<input name="gif_url" class="form-control" type="text" placeholder="Gif URL">
 			</form>
 			<div class="input-group">
 			    <textarea class="form-control custom-control" rows="3" style="resize:none" placeholder="Comment..."></textarea> <span class="reply_send_btn input-group-addon btn btn-primary">Submit <i class="fa fa-paper-plane-o"></i></span>

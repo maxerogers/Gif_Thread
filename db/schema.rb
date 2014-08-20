@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140818215755) do
+ActiveRecord::Schema.define(version: 20140819223928) do
 
   create_table "comments", force: true do |t|
     t.string  "username"
     t.string  "gif_url"
     t.string  "data"
     t.integer "parent_id"
-    t.string  "tier"
+    t.integer "tier"
   end
 
 end

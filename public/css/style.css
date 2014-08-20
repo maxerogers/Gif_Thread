@@ -41,3 +41,35 @@ p{
 	border: #357ebd;
 	color: white;
 }
+.tier-1{
+	padding-left: 2em;
+	border-left: solid #FF000;
+}
+.tier-1 .btn-primary{
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+}
+.tier-2{
+	padding-left: 4em;
+	border-left: solid #FF000;
+}
+.tier-2 .btn-primary{
+	background-color: #5bc0de;
+	border-color: #46b8da;
+}
+.tier-3{
+	padding-left: 6em;
+	border-left: solid #FF000;
+}
+.tier-3 .btn-primary{
+	background-color: #f0ad4e;
+	border-color: #eea236;
+}
+.tier-4{
+	padding-left: 8em;
+	border-left: solid #FF000;
+}
+.tier-4 .btn-primary{
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
