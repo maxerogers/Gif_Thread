@@ -25,12 +25,13 @@
 		.img_box{
 			display:inline-block;
 			vertical-align:top;
-			width:300px;
 		}
 		.comment_box{
+			display: inline-block;
 			vertical-align:top;
 		}
 		.comment_box h4{
+			margin-top: 0px;
 		}
 		.reply_box{
 			margin-top: 1em;
@@ -70,22 +71,22 @@
 		</div>
 	</div>
 	<br>
-	<div class="comment">
-		<div class="img_box">
+	<div class="comment tier-0 row">
+		<div class="img_box col-xs-3">
 			<img class="thumb_gif" src="public/img/minions_shopping.gif">
 			<div class="btn-group btn-group-justified">
 			<div class="btn-group">
-			<button type="button" class="btn btn-primary replay_btn">Replay <i class="fa fa-share"></i></button>
+			<button type="button" class="btn btn-primary replay_btn"><i class="fa fa-share"></i></button>
 			</div>
 			<div class="btn-group">
-			<button type="button" class="btn btn-primary enlarge_btn">Enlarge <i class="fa fa-search-plus"></i></button>
+			<button type="button" class="btn btn-primary enlarge_btn"><i class="fa fa-search-plus"></i></button>
 			</div>
 			<div class="btn-group">
-			<button type="button" class="btn btn-primary"> Report <i class="fa fa-ban"></i></button>
+			<button type="button" class="btn btn-primary like_btn"><i class="fa fa-thumbs-up"></i></button>
 			</div>
 			</div>
 		</div>
-		<div class="comment_box">
+		<div class="comment_box col-xs-9">
 			<h4> [1 Hour Ago] Minion1069: </h4>
 			<p> Lets go shopping today guys? </p>
 		</div>
@@ -102,27 +103,27 @@
 			</div>
 		</div>
 	</div>
-	<div class="comment tier-1">
-		<div class="img_box">
-			<img class="thumb_gif" src="http://media.giphy.com/media/9gz8R9Ty9RyDu/giphy.gif">
+	<div class="comment tier-1 row">
+		<div class="img_box col-xs-3">
+			<img class="thumb_gif" src="public/img/minions_shopping.gif">
 			<div class="btn-group btn-group-justified">
 			<div class="btn-group">
 			<button type="button" class="btn btn-primary replay_btn">Replay <i class="fa fa-share"></i></button>
 			</div>
 			<div class="btn-group">
-			<button type="button" class="btn btn-primary enlarge_btn">Enlarge <i class="fa fa-search-plus"></i></button>
+			<button type="button" class="btn btn-primary enlarge_btn"><i class="fa fa-search-plus"></i></button>
 			</div>
 			<div class="btn-group">
 			<button type="button" class="btn btn-primary"> Report <i class="fa fa-ban"></i></button>
 			</div>
 			</div>
 		</div>
-		<div class="comment_box">
+		<div class="comment_box col-xs9">
 			<h4> [1 Hour Ago] SailorFanGirl02: </h4>
 			<p> did someone say shopping?</p>
 		</div>
 		<div class="gif_box" style="display:none">
-			<img src="http://media.giphy.com/media/9gz8R9Ty9RyDu/giphy.gif">
+			<img src="public/img/minions_shopping.gif">
 		</div>
 		<div class="reply_box" style="display:none;">
 			<form class="form-inline" role="form">
@@ -142,10 +143,10 @@
 	$(".enlarge_btn").click(function(){
 		var x = $(this);
 		$(this).parent().parent().parent().parent().children(".gif_box").toggle("fast",function(){	
-			if(x.html() === "Enlarge <i class=\"fa fa-search-plus\"></i>"){
-				x.html("Shrink <i class=\"fa fa-search-minus\"></i>");
+			if(x.html() === "<i class=\"fa fa-search-plus\"></i>"){
+				x.html("<i class=\"fa fa-search-minus\"></i>");
 			}else{
-				x.html("Enlarge <i class=\"fa fa-search-plus\"></i>");
+				x.html("<i class=\"fa fa-search-plus\"></i>");
 			}
 		});
 	});

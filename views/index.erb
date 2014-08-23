@@ -3,6 +3,7 @@
 <div class="thread col-sm-8 col-xs-12">
 	<div class="reply_box">
 		<form class="form-inline" role="form">
+			<input name="id" type="hidden" value="-1">
 			<input name="tier" type="hidden" value="0">
 			<input  name="username" class="form-control" type="text" placeholder="Username">
 			<input  name="gif_url" class="form-control" type="text" placeholder="Gif URL">
@@ -44,8 +45,12 @@
 				json.tier = $(this).parent().parent().children("form").children("input[name='tier']").val();
 				json.username = $(this).parent().parent().children("form").children("input[name='username']").val();
 				json.gif_url = $(this).parent().parent().children("form").children("input[name='gif_url']").val();
+				json.id = $(this).parent().parent().children("form").children("input[name='id']").val();
 				$.post("/create_comment",json,function(){
 					window.location.reload();
 				});
+			});
+			$(".like_btn").click(function(){
+				console.log($(this).parent());
 			});
 		</script>

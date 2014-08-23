@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140819223928) do
+ActiveRecord::Schema.define(version: 20140821033245) do
 
   create_table "comments", force: true do |t|
-    t.string  "username"
-    t.string  "gif_url"
-    t.string  "data"
-    t.integer "parent_id"
-    t.integer "tier"
+    t.string   "username"
+    t.string   "gif_url"
+    t.string   "data"
+    t.integer  "parent_id"
+    t.integer  "tier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

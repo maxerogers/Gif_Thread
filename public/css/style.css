@@ -18,9 +18,11 @@ nav{
 .img_box{
 	display:inline-block;
 	vertical-align:top;
-	width:300px;
+	width:100px;
 }
 .comment_box{
+	display: inline-block;
+	width:568px;
 	vertical-align:top;
 }
 .comment_box h4{
